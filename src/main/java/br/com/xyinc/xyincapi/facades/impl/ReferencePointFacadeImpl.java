@@ -17,6 +17,8 @@ import java.util.List;
 @AllArgsConstructor(onConstructor = @_(@Autowired))
 public class ReferencePointFacadeImpl implements ReferencePointFacade {
 
+    private final Double D_MAX = 10.00;
+
     private final ReferencePointService referencePointService;
     private final ModelMapper modelMapper;
 
@@ -35,11 +37,36 @@ public class ReferencePointFacadeImpl implements ReferencePointFacade {
         return localList;
     }
 
+    @Override
+    public List<LocalResponseDTO> getReferencePoint(Double coordinateX, Double coordinateY) {
+        List<LocalResponseDTO> localList = new ArrayList<>();
+
+        for (Local local : referencePointService.getLocal()) {
+
+            Double firstCalculation = calculateFirstPoint(coordinateX, local.getCoordinateX());
+            Double secondCalculation = calculateSecondPoint(coordinateY, local.getCoordinateY());
+            Double distance = Math.sqrt(firstCalculation + secondCalculation);
+
+            if (distance <= D_MAX) {
+                localList.add(convertToDTO(local));
+            }
+        }
+        return localList;
+    }
+
     private Local convertToEntity(LocalRequestDTO localRequestDTO) {
         return modelMapper.map(localRequestDTO, Local.class);
     }
 
     private LocalResponseDTO convertToDTO(Local local) {
         return modelMapper.map(local, LocalResponseDTO.class);
+    }
+
+    private Double calculateFirstPoint(Double coordinateX, Double coordinateY) {
+        return Math.pow(coordinateX - coordinateY, 2);
+    }
+
+    private Double calculateSecondPoint(Double coordinateX, Double coordinateY) {
+        return Math.pow(coordinateX - coordinateY, 2);
     }
 }

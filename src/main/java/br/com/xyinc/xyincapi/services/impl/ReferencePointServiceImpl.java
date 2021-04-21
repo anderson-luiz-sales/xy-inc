@@ -28,4 +28,10 @@ public class ReferencePointServiceImpl implements ReferencePointService {
         log.info("ReferencePointserviceImpl.finAll");
         return referencePointRepository.findAll();
     }
+
+    @Override
+    public List<Local> getReferencePoint(Double coordinateX, Double coordinateY) {
+        log.info("ReferencePointserviceImpl.finAll");
+        return referencePointRepository.findAll();
+    }
 }

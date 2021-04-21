@@ -8,4 +8,5 @@ public interface ReferencePointService {
 
     Local save(Local local);
     List<Local> getLocal();
+    List<Local> getReferencePoint(Double coordinateX, Double coordinateY);
 }

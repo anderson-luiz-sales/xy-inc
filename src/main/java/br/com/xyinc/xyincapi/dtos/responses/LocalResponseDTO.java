@@ -9,6 +9,6 @@ public class LocalResponseDTO implements Serializable {
 
     private String id;
     private String name;
-    private Double Latitude;
-    private Double Longitude;
+    private Double coordinateX;
+    private Double coordinateY;
 }

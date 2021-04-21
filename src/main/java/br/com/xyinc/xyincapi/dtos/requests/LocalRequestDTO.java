@@ -8,6 +8,6 @@ import java.io.Serializable;
 public class LocalRequestDTO implements Serializable {
 
     private String name;
-    private Double Latitude;
-    private Double Longitude;
+    private Double coordinateX;
+    private Double coordinateY;
 }

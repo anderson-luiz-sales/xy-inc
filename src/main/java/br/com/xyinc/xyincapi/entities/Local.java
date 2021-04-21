@@ -13,6 +13,6 @@ public class Local implements Serializable {
     @Id
     private String id;
     private String name;
-    private Double Latitude;
-    private Double Longitude;
+    private Double coordinateX;
+    private Double coordinateY;
 }

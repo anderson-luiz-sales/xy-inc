@@ -12,6 +12,6 @@ swagger:
 spring:
   data:
     mongodb:
-      host: db
+      host: localhost
       port: 27017
       database: xyinc-api
