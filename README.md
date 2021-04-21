@@ -9,6 +9,7 @@ O que você precisa instalar para rodar o projeto?
 * [JDK-8](https://www.oracle.com/technetwork/pt/java/javase/downloadsjdk8-downloads-2133151.html)
 * [JRE-8](https://www.oracle.com/technetwork/pt/java/javase/downloadsjre8-downloads-2133155.html)
 * [MongoDB](https://www.mongodb.com/)
+* [Docker](https://docs.docker.com/docker-for-windows/install/)
 
 ### Instalação
 
