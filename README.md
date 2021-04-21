@@ -1,4 +1,4 @@
-# Telephone Book API
+# Xy Inc API
 
 API responsável por gerenciar pontos de interesse
 
