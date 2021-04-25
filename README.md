@@ -17,6 +17,11 @@ git clone https://github.com/anderson-luiz-sales/xy-inc.git
 
 ### Como rodar a API
 
+#### Docker Compose Build and Run (Caso ocorra problemas com Terminal Wuindows)
+```
+find . -type f -print0 | xargs -0 dos2unix
+```
+
 #### Docker Compose Build and Run
 ```
 sh docker-compose-dev.sh
