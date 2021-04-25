@@ -40,5 +40,36 @@ http://localhost:8080/swagger-ui.html#/
 * [Model Mapper](http://modelmapper.org/) - Os aplicativos geralmente consistem em modelos de objetos semelhantes, mas diferentes, em que os dados em dois modelos podem ser semelhantes, mas a estrutura e as preocupações dos modelos são diferentes. O mapeamento de objetos facilita a conversão de um modelo em outro, permitindo que modelos separados permaneçam segregados.
 * [Swagger](https://swagger.io/) - Simplifique o desenvolvimento de API para usuários, equipes e empresas com o conjunto de ferramentas open source e profissional Swagger.
 
+### Contrato da aplicação:
+```
+{
+  "coordinateX": 27,
+  "coordinateY": 12,
+  "name": "Lanchonete"
+}
 
+{
+  "coordinateX": 31,
+  "coordinateY": 18,
+  "name": "Posto"
+}
+
+{
+  "coordinateX": 12,
+  "coordinateY": 8,
+  "name": "Pub"
+}
+
+{
+  "coordinateX": 23,
+  "coordinateY": 6,
+  "name": "Supermercado"
+}
+
+{
+  "coordinateX": 28,
+  "coordinateY": 2,
+  "name": "Churrascaria"
+}
+```
 

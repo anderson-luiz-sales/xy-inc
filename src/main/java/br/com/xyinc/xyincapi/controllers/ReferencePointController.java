@@ -2,6 +2,7 @@ package br.com.xyinc.xyincapi.controllers;
 
 import br.com.xyinc.xyincapi.dtos.requests.LocalRequestDTO;
 import br.com.xyinc.xyincapi.dtos.responses.LocalResponseDTO;
+import br.com.xyinc.xyincapi.exceptions.NotFoundException;
 import br.com.xyinc.xyincapi.facades.ReferencePointFacade;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
@@ -41,5 +42,18 @@ public class ReferencePointController {
     public ResponseEntity<List<LocalResponseDTO>> referencePoint(@PathVariable Double coordinateX,
                                                                  @PathVariable Double coordinateY) {
         return new ResponseEntity<>(referencePointFacade.getReferencePoint(coordinateX, coordinateY), HttpStatus.OK);
+    }
+
+    @ApiOperation(value = "Get BY Id Local v1")
+    @GetMapping("/{id}")
+    public ResponseEntity<LocalResponseDTO> getById(@PathVariable String id) {
+        return new ResponseEntity<>(referencePointFacade.findById(id), HttpStatus.OK);
+    }
+
+    @ApiOperation(value = "Delete Local v1")
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteById(@PathVariable String id) {
+        referencePointFacade.deleteById(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }

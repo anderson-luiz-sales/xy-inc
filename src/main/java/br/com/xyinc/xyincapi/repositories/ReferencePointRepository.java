@@ -6,4 +6,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import java.math.BigInteger;
 
 public interface ReferencePointRepository extends MongoRepository<Local, String> {
+
+    Local findByid(String id);
 }

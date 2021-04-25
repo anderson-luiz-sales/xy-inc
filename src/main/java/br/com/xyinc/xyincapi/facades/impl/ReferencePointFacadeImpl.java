@@ -54,6 +54,16 @@ public class ReferencePointFacadeImpl implements ReferencePointFacade {
         return localList;
     }
 
+    @Override
+    public LocalResponseDTO findById(String id) {
+        return convertToDTO(referencePointService.findById(id));
+    }
+
+    @Override
+    public void deleteById(String id) {
+        referencePointService.deleteById(id);
+    }
+
     private Local convertToEntity(LocalRequestDTO localRequestDTO) {
         return modelMapper.map(localRequestDTO, Local.class);
     }
