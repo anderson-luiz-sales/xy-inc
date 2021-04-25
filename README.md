@@ -17,14 +17,14 @@ git clone https://github.com/anderson-luiz-sales/xy-inc.git
 
 ### Como rodar a API
 
+#### Docker Compose Build and Run (Executar a aplicação via Docker)
+```
+sh docker-compose-dev.sh
+```
+
 #### Docker Compose Build and Run (Caso ocorra problemas com Terminal Wuindows)
 ```
 find . -type f -print0 | xargs -0 dos2unix
-```
-
-#### Docker Compose Build and Run
-```
-sh docker-compose-dev.sh
 ```
 
 ### Para validar se foi instalado corretamente:
@@ -92,7 +92,7 @@ http://localhost:8080/swagger-ui.html#/
   {
     "id": "60859934a4020d30238ea0db",
     "name": "Churrascaria",
-    "coordinateX": null,
+    "coordinateX": 28,
     "coordinateY": 2
   }
 ```
