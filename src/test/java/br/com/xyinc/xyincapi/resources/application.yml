@@ -19,7 +19,7 @@ spring-test:
 spring:
   data:
     mongodb:
-      host: localhost
+      host: db
       port: 27017
       database: xyinc-api
 
