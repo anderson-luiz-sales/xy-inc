@@ -1,0 +1,38 @@
+# #################################################################################################################### #
+#                                            CONFIGURATION FOR TESTS:                                                  #
+# #################################################################################################################### #
+swagger:
+  contact:
+    name: Anderson Sales
+    email: anderson.luiz.sales@gmail.com
+  app:
+    name: Xy Inc API
+    version: 0.0.1
+    description: API responsável por gerenciar pontos de interesse.
+  base:
+    package: br.com.xyinc.xyincapi
+
+spring-test:
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: xyinc-api
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      base-path: null
+      path-mapping:
+        health: /healthcheck
+
+server:
+  error:
+    include-stacktrace: on_trace_param

@@ -10,6 +10,9 @@ import java.io.Serializable;
 public class LocalRequestDTO implements Serializable {
 
     @NotNull(message = "Campo obrigatório")
+    private String id;
+
+    @NotNull(message = "Campo obrigatório")
     private String name;
 
     @NotNull(message = "Campo obrigatório")

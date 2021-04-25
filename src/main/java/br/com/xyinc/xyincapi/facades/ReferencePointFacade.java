@@ -11,5 +11,6 @@ public interface ReferencePointFacade {
     List<LocalResponseDTO> getLocal();
     List<LocalResponseDTO> getReferencePoint(Double coordinateX, Double coordinateY);
     LocalResponseDTO findById(String id);
+    LocalResponseDTO update(LocalRequestDTO localRequestDTO);
     void deleteById(String id);
 }

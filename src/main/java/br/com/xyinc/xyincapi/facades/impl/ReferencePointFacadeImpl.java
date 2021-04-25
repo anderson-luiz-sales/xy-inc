@@ -60,6 +60,11 @@ public class ReferencePointFacadeImpl implements ReferencePointFacade {
     }
 
     @Override
+    public LocalResponseDTO update(LocalRequestDTO localRequestDTO) {
+        return convertToDTO(referencePointService.save(convertToEntity(localRequestDTO)));
+    }
+
+    @Override
     public void deleteById(String id) {
         referencePointService.deleteById(id);
     }

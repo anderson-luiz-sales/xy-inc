@@ -14,6 +14,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -39,7 +40,7 @@ public class ReferencePointController {
 
     @ApiOperation(value = "Get Reference Point v1")
     @GetMapping("/v1/local/coordinateX/{coordinateX}/coordinateY/{coordinateY}")
-    public ResponseEntity<List<LocalResponseDTO>> referencePoint(@PathVariable Double coordinateX,
+    public ResponseEntity<List<LocalResponseDTO>> getReferencePoint(@PathVariable Double coordinateX,
                                                                  @PathVariable Double coordinateY) {
         return new ResponseEntity<>(referencePointFacade.getReferencePoint(coordinateX, coordinateY), HttpStatus.OK);
     }
@@ -48,6 +49,12 @@ public class ReferencePointController {
     @GetMapping("/{id}")
     public ResponseEntity<LocalResponseDTO> getById(@PathVariable String id) {
         return new ResponseEntity<>(referencePointFacade.findById(id), HttpStatus.OK);
+    }
+
+    @ApiOperation(value = "Put Local v1")
+    @PutMapping
+    public ResponseEntity<LocalResponseDTO> update(@RequestBody @Valid LocalRequestDTO localRequestDTO) {
+        return new ResponseEntity<>(referencePointFacade.update(localRequestDTO), HttpStatus.OK);
     }
 
     @ApiOperation(value = "Delete Local v1")

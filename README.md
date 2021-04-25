@@ -42,34 +42,53 @@ http://localhost:8080/swagger-ui.html#/
 
 ### Contrato da aplicação:
 ```
-{
-  "coordinateX": 27,
-  "coordinateY": 12,
-  "name": "Lanchonete"
-}
+  {
+    "id": "60858e0de781bf781eb19381",
+    "name": "Lanchonete",
+    "coordinateX": 27,
+    "coordinateY": 12
+  }
 
-{
-  "coordinateX": 31,
-  "coordinateY": 18,
-  "name": "Posto"
-}
+  {
+    "id": "60858e2ce781bf781eb19382",
+    "name": "Posto",
+    "coordinateX": 31,
+    "coordinateY": 18
+  }
 
-{
-  "coordinateX": 12,
-  "coordinateY": 8,
-  "name": "Pub"
-}
+  {
+    "id": "60858e46e781bf781eb19383",
+    "name": "Joalheria",
+    "coordinateX": 15,
+    "coordinateY": 12
+  }
 
-{
-  "coordinateX": 23,
-  "coordinateY": 6,
-  "name": "Supermercado"
-}
+  {
+    "id": "60858e55e781bf781eb19384",
+    "name": "Floricultura",
+    "coordinateX": 19,
+    "coordinateY": 21
+  }
 
-{
-  "coordinateX": 28,
-  "coordinateY": 2,
-  "name": "Churrascaria"
-}
+  {
+    "id": "60858e87e781bf781eb19385",
+    "name": "Pub",
+    "coordinateX": 12,
+    "coordinateY": 8
+  }
+
+  {
+    "id": "60858ea0e781bf781eb19386",
+    "name": "Supermercado",
+    "coordinateX": 23,
+    "coordinateY": 6
+  }
+
+  {
+    "id": "60859934a4020d30238ea0db",
+    "name": "Churrascaria",
+    "coordinateX": null,
+    "coordinateY": 2
+  }
 ```
 
